@@ -9,9 +9,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './_services/token.interceptor';
+import { PostCreateComponent } from './posts/post-create/post-create.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, ProfileComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, ProfileComponent, PostCreateComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
